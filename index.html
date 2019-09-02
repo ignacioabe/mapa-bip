@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Mapa puntos BIP (scl)</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        #map {
+        height: calc(100% - 40px);
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        }
+
+        #header {
+        height: 40px;
+        background-image: linear-gradient(to right, red , yellow);
+        }
+
+        #header h1 {
+        font-weight: normal;
+        color: #ffffff;
+        margin: 0px;
+        padding-left: 10px;
+        padding-top: 5px;
+        font-family: 'Roboto Mono', monospace;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="header">
+    <h1>Mapa puntos BIP (scl)</h1>
+</div>
+
+<div id='map'></div>
+
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWduYWNpb2FiZSIsImEiOiJsTDV0dWFJIn0.Og513NMky_08_sXUUDsrbA';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/ignacioabe/cjzswgkik0epg1cl6uusxzs2u', // stylesheet location
+    center: [-70.661659, -33.450063], // starting position [lng, lat]
+    zoom: 10 // starting zoom
+});
+
+</script>
+
+</body>
+
+</html>
